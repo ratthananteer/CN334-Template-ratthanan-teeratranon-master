@@ -1,5 +1,5 @@
 """
-URL configuration for user_service project.
+URL configuration for product_service project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -15,24 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from product_management.views import *
-from product_management import views
-from django.conf import settings
-from django.conf.urls.static import static
 from django.urls import path
-
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/register', register, name="register"),
-    path("api/token/", MyTokenView.as_view(), name="token_obtain_pair"),
-    path('api/product/',ProductListView.as_view(), name="product-list"),
-    path('api/product/<int:pk>/', ProductDetailView.as_view(), name="product-detail"),
-    path('api/payment/<int:pk>/', PaymentDetailView.as_view(), name="payment-detail"),
-    path('api/review/',ReviewListView.as_view(), name="review-list"),
-    path('api/payment/', create_payment, name="create-payment"),
-    path('api/submit-rating/', rating_view, name='submit_rating'),
-    path('api/reviewshop/create/', CreateReviewView.as_view(), name='create-review'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

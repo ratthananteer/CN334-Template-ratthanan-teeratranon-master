@@ -105,7 +105,7 @@ export default function DetailsPage({ product, pricePerHour , detail , productId
           <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 transform hover:shadow-xl transition duration-500 ease-in-out">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative overflow-hidden rounded-2xl">
-              <Image 
+                <img
                   src={product.image} alt={product.product_name} className="w-full h-full object-cover transform hover:scale-105 transition duration-500 ease-in-out"
                 />
               </div>

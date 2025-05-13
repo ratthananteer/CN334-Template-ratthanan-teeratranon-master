@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
@@ -125,7 +126,7 @@ export default function HomePage() {
               <div className="carousel-inner rounded-3xl overflow-hidden">
                 {[1, 2, 3].map((num, idx) => (
                   <div key={num} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
-                    <image
+                    <Image
                       src={`/img/Banner${num}.png`}
                       width={800}
                       height={200}
@@ -144,23 +145,19 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
         <section className="mb-16">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">Top Employees</h1>
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="container mx-auto px-4 flex justify-between gap-8 flex-wrap">
             {products.filter(p => p.top).map(product => (
-              <div
-                key={product.id}
-                className="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-500 ease-in-out"
-              >
+              <Link key={product.id} href={`/details/${product.id}`}>
                 <Image
                   src={`http://localhost:3342${product.image}`}
-                  width={120}
-                  height={120}
-                  className="rounded-2xl object-cover"
+                  width={140}
+                  height={140}
+                  className="rounded-2xl object-cover transform hover:scale-105 transition duration-500 ease-in-out cursor-pointer flex-shrink-0"
                   alt={product.product_name}
                 />
-              </div>
+              </Link>
             ))}
           </div>
         </section>
