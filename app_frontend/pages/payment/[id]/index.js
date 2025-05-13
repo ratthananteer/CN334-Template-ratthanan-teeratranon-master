@@ -34,7 +34,7 @@ export default function Payment({total_price}) {
       const { id } = router.query;
       setProductId(id);
     }
-  }, [router.isReady]);
+  }, [router.query]);
   const handleConfirm = () => {
     if (productId) {
       router.push(`/rating/${productId}`);

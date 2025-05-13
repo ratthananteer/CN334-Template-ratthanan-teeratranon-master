@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function CreatePage() {
@@ -65,9 +66,9 @@ export default function CreatePage() {
             </div>
           </div>
           <div className="action">
-            <a href="/login">
+            <Link href="/login">
               <button className="cancle" type="button">ยกเลิก</button>
-            </a>
+            </Link>
             <button className="create" type="submit" disabled={!isValid}>ยืนยัน</button>
           </div>
         </div>

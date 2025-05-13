@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 export async function getServerSideProps(context) {
   const { id } = context.params;
   const res = await fetch(`http://localhost:3342/api/product/${id}/`);
@@ -105,7 +105,7 @@ export default function DetailsPage({ product, pricePerHour , detail , productId
           <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 transform hover:shadow-xl transition duration-500 ease-in-out">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative overflow-hidden rounded-2xl">
-                <img
+              <Image 
                   src={product.image} alt={product.product_name} className="w-full h-full object-cover transform hover:scale-105 transition duration-500 ease-in-out"
                 />
               </div>
