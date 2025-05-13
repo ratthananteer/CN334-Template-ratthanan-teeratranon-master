@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
@@ -126,7 +125,7 @@ export default function HomePage() {
               <div className="carousel-inner rounded-3xl overflow-hidden">
                 {[1, 2, 3].map((num, idx) => (
                   <div key={num} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
-                    <Image
+                    <image
                       src={`/img/Banner${num}.png`}
                       width={800}
                       height={200}
