@@ -20,6 +20,7 @@ services:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=cn334Admin
       - POSTGRES_PASSWORD=cn334Admin
+    env_file: .env
     depends_on:
       - db
   user_api:
