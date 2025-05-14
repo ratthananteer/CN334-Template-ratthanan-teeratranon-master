@@ -54,7 +54,6 @@ class PaymentSerializer(serializers.ModelSerializer):
         fields = ['id', 'userid', 'Product_id', 'status', 'payment_method', 'total_price']
 
     def create(self, validated_data):
-        # convert plain ID to model instance
         user_id = validated_data.pop('userid')
         detail_id = validated_data.pop('Product_detail_id')
 

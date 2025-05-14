@@ -70,12 +70,11 @@ export default function HomePage() {
     <ul className="flex space-x-8">
       {['Homepage', 'Review', 'Log out'].map((item, idx) => (
         <li key={idx} className="group">
-          {/* เช็คว่าเป็น 'Log out' หรือไม่ ถ้าใช่ ให้ใช้ onClick เพื่อ logout */}
           {item === 'Log out' ? (
             <button
               onClick={() => {
-                localStorage.clear();  // ล้างข้อมูลใน localStorage
-                window.location.href = '/login';  // รีไดเรกไปที่หน้า login
+                localStorage.clear();  
+                window.location.href = '/login'; 
               }}
               className="text-white text-lg font-medium hover:text-yellow-300 transition duration-300 ease-in-out group-hover:scale-105"
             >

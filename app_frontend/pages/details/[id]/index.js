@@ -59,7 +59,7 @@ export default function DetailsPage({ product, pricePerHour , detail , productId
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // ดึงข้อความจาก response
+        const errorText = await res.text(); 
         console.error("Error from API:", errorText);
         throw new Error("ส่งข้อมูลล้มเหลว");
       }
