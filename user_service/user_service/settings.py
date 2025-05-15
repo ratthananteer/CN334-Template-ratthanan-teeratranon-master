@@ -13,6 +13,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'cn334-template-ratthanan-teeratranon-mxt4.onrender.com']
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_PRIVATE_NETWORK = True
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
