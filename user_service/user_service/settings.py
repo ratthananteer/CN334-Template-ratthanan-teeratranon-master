@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user_management',
-    'product_management',
+    # 'product_management',
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
