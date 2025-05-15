@@ -66,7 +66,7 @@ DATABASES = {
         'NAME': 'db_b3j1',
         'USER': 'ratthanan',
         'PASSWORD': 'bk8pMRKZWs1Kg7PgQCKtREGkgFCDnHPB',
-        'HOST': 'dpg-d0ica4muk2gs73a3qdlg-a',
+        'HOST': 'dpg-d0ica4muk2gs73a3qdlg-a.db.elephantsql.com',
         'PORT': '5432',
     }
 }
