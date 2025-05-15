@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const res = await fetch(`http://localhost:3342/api/payment/${id}/`);
+  const res = await fetch(`https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/payment/${id}/`);
   const payment = await res.json();
   const productId = payment.Product_id;
   return {
