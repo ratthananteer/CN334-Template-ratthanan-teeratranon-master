@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.db.models.signals import post_save
 
 
 class Useri(models.Model):
@@ -74,3 +75,8 @@ class Payment(models.Model):
 def update_payment_total_price(sender, instance, **kwargs):
     if instance.total_price in [0, None] and instance.Product_detail_id:
         instance.total_price = instance.Product_detail_id.total_price
+
+@receiver(post_save, sender=User)
+def create_useri(sender, instance, created, **kwargs):
+    if created:
+        Useri.objects.create(username=instance, email=instance.email)
