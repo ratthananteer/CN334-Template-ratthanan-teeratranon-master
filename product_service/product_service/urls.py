@@ -21,10 +21,11 @@ from product_management import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-
+from product_management.views import *
 
 
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/register', register, name="register"),
     path("api/token/", MyTokenView.as_view(), name="token_obtain_pair"),

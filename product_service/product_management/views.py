@@ -16,6 +16,10 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers, generics, permissions, status
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("🎉 API server is running!")
 
 @csrf_exempt
 def register(request):
