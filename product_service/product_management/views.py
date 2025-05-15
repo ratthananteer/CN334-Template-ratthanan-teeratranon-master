@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from user_management.models import Useri , Review_Shop
-from user_management.serializers import Review_ShopSerializer , UserSerializer
+from product_management.models import Useri , Review_Shop
+from product_management.serializers import Review_ShopSerializer , UserSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from user_management.models import Useri
+from product_management.models import Useri
 from .models import Review_Shop, Product, Review, Product_detail, Payment
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
