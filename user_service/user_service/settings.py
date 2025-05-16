@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-q)d@zxjo28)dtwn9f_^xge^t*14)aoj!(sp^fzybd)dg&nd@$z
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'thaiservice.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'thaiservice.onrender.com','cn334-template-ratthanan-teeratranon-mxt4.onrender.com']
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_PRIVATE_NETWORK = True
 
