@@ -33,7 +33,7 @@ export default function Rating({productId,}) {
     try {
       console.log("product id",productId)
       console.log("rating id",ratingId)
-      await fetch("http://localhost:3342/api/submit-rating/", {
+      await fetch("https://thaiservice.onrender.com/api/submit-rating/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rating: ratingId, product_id: productId }),

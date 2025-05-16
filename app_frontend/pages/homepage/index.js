@@ -150,7 +150,7 @@ export default function HomePage() {
             {products.filter(p => p.top).map(product => (
               <Link key={product.id} href={`/details/${product.id}`}>
                 <Image
-                  src={`http://localhost:3342${product.image}`}
+                  src={`https://thaiservice.onrender.com${product.image}`}
                   width={140}
                   height={140}
                   className="rounded-2xl object-cover transform hover:scale-105 transition duration-500 ease-in-out cursor-pointer flex-shrink-0"
