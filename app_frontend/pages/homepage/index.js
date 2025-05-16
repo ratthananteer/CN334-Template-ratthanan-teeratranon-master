@@ -27,7 +27,7 @@ export default function HomePage() {
     console.log("Comment:", comment);
     console.log("User id:", user_id);
     try {
-      const response = await fetch('https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/reviewshop/create/', {
+      const response = await fetch('https://thaiservice.onrender.com/api/reviewshop/create/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

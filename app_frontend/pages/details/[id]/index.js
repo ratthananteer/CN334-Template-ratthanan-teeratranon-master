@@ -50,7 +50,7 @@ export default function DetailsPage({ product, pricePerHour , detail , productId
     console.log("orderData:", orderData);
    
     try {
-      const res = await fetch('https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/payment/', {
+      const res = await fetch('https://thaiservice.onrender.com/api/payment/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('jwt_access')}`,

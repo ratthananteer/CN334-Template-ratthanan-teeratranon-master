@@ -11,7 +11,7 @@ export default function Login() {
         e.preventDefault();
         const formData = new FormData(e.target);
 
-        const response = await fetch('https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/token/', {
+        const response = await fetch('https://thaiservice.onrender.com/api/token/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
