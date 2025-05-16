@@ -6,7 +6,7 @@ export default function ReviewPage() {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch('https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/review/')
+    fetch('https://thaiservice.onrender.com/api/review/')
       .then(res => res.json())
       .then(data => setReviews(data));
     window.logout = function () {

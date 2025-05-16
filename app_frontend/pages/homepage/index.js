@@ -8,7 +8,7 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [comment, setComment] = useState('');
   useEffect(() => {
-    fetch('https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/product/')
+    fetch('https://thaiservice.onrender.com/api/product/')
       .then(res => res.json())
       .then(data => setProducts(data));
       window.logout = () => {

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const res = await fetch(`https://cn334-template-ratthanan-teeratranon-mxt4.onrender.com/api/product/${id}/`);
+  const res = await fetch(`https://thaiservice.onrender.com/api/product/${id}/`);
   const product = await res.json();
   const productName = product.product_name;
   const pricePerHour = product.price;

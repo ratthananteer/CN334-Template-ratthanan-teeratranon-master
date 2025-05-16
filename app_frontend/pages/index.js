@@ -8,7 +8,7 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [comment, setComment] = useState('');
   useEffect(() => {
-    fetch('http://localhost:3342/api/product/')
+    fetch('https://thaiservice.onrender.com/api/product/')
       .then(res => res.json())
       .then(data => setProducts(data));
       window.logout = () => {
@@ -27,7 +27,7 @@ export default function HomePage() {
     console.log("Comment:", comment);
     console.log("User id:", user_id);
     try {
-      const response = await fetch('http://localhost:3342/api/reviewshop/create/', {
+      const response = await fetch('https://thaiservice.onrender.com/api/reviewshop/create/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
