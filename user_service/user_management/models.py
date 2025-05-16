@@ -63,7 +63,7 @@ class Product_detail(models.Model):
 
 class Payment(models.Model):
     userid = models.ForeignKey(Useri, on_delete=models.CASCADE, null=True, blank=True)
-    Product_id = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
+    product_id = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     status = models.BooleanField(default=False)
     payment_method = models.CharField(max_length=100)
     total_price = models.DecimalField(max_digits=10, decimal_places=2 , default=0.00)
